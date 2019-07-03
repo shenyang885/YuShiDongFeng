@@ -1,0 +1,14 @@
+﻿@model 余氏东风.ViewModels.SchoolVMs.SchoolVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.SchoolCode" />
+<wt:display field="Entity.SchoolName" />
+<wt:display field="Entity.SchoolType" />
+<wt:display field="Entity.Remark" />
+<wt:display field="Entity.PhotoId" />
+</wt:row>
+    <wt:row align=" AlignEnum.Right">
+        <wt:closebutton />
+    </wt:row>
+</wt:form>
