@@ -1,0 +1,18 @@
+﻿@model 余氏东风.ViewModels.ShopCensusVMs.ShopCensusVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:datetime field="Entity.Riqi" />
+<wt:combobox field="Entity.Type" />
+<wt:textbox field="Entity.WXZZFee" />
+<wt:textbox field="Entity.XjFee" />
+<wt:textbox field="Entity.WxFee" />
+<wt:textbox field="Entity.SkFee" />
+<wt:textbox field="Entity.ZfbFee" />
+<wt:textbox field="Entity.SumFee" />
+</wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

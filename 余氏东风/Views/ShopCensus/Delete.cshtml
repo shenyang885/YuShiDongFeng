@@ -1,0 +1,20 @@
+﻿@model 余氏东风.ViewModels.ShopCensusVMs.ShopCensusVM
+
+<wt:form vm="@Model">
+	<wt:quote>确定要删除这条数据么：</wt:quote>
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.Riqi" />
+<wt:display field="Entity.Type" />
+<wt:display field="Entity.WXZZFee" />
+<wt:display field="Entity.XjFee" />
+<wt:display field="Entity.WxFee" />
+<wt:display field="Entity.SkFee" />
+<wt:display field="Entity.ZfbFee" />
+<wt:display field="Entity.SumFee" />
+</wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align=" AlignEnum.Right">
+        <wt:submitbutton theme=" ButtonThemeEnum.Warm" text="删除"/>
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

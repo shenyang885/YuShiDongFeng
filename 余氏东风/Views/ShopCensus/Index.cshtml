@@ -1,0 +1,9 @@
+﻿@model 余氏东风.ViewModels.ShopCensusVMs.ShopCensusListVM
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+<wt:row items-per-row="ItemsPerRowEnum.Three">
+<wt:datetime field="Searcher.Riqi" />
+<wt:combobox field="Searcher.Type" empty-text="全部" />
+</wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" />

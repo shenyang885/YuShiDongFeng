@@ -1,0 +1,37 @@
+﻿@model 余氏东风.ViewModels.ShopVMs.ShopVM
+
+<wt:form vm="@Model">
+	<wt:quote>确定要删除这条数据么：</wt:quote>
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.Riqi" />
+<wt:display field="Entity.Type" />
+<wt:display field="Entity.FkRenYuan" />
+<wt:display field="Entity.SkRenYuan" />
+<wt:display field="Entity.Name1" />
+<wt:display field="Entity.Fee1" />
+<wt:display field="Entity.PayMethod1" />
+<wt:display field="Entity.Name2" />
+<wt:display field="Entity.Fee2" />
+<wt:display field="Entity.PayMethod2" />
+<wt:display field="Entity.Name3" />
+<wt:display field="Entity.Fee3" />
+<wt:display field="Entity.PayMethod3" />
+<wt:display field="Entity.Name4" />
+<wt:display field="Entity.Fee4" />
+<wt:display field="Entity.PayMethod4" />
+<wt:display field="Entity.Name5" />
+<wt:display field="Entity.Fee5" />
+<wt:display field="Entity.PayMethod5" />
+<wt:display field="Entity.WXZZFee" />
+<wt:display field="Entity.XjFee" />
+<wt:display field="Entity.WxFee" />
+<wt:display field="Entity.SkFee" />
+<wt:display field="Entity.ZfbFee" />
+<wt:display field="Entity.SumFee" />
+</wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align=" AlignEnum.Right">
+        <wt:submitbutton theme=" ButtonThemeEnum.Warm" text="删除"/>
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

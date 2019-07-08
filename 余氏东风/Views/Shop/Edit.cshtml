@@ -1,0 +1,36 @@
+﻿@model 余氏东风.ViewModels.ShopVMs.ShopVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:datetime field="Entity.Riqi" />
+<wt:combobox field="Entity.Type" />
+<wt:textbox field="Entity.FkRenYuan" />
+<wt:textbox field="Entity.SkRenYuan" />
+<wt:textbox field="Entity.Name1" />
+<wt:textbox field="Entity.Fee1" />
+<wt:combobox field="Entity.PayMethod1" />
+<wt:textbox field="Entity.Name2" />
+<wt:textbox field="Entity.Fee2" />
+<wt:combobox field="Entity.PayMethod2" />
+<wt:textbox field="Entity.Name3" />
+<wt:textbox field="Entity.Fee3" />
+<wt:combobox field="Entity.PayMethod3" />
+<wt:textbox field="Entity.Name4" />
+<wt:textbox field="Entity.Fee4" />
+<wt:combobox field="Entity.PayMethod4" />
+<wt:textbox field="Entity.Name5" />
+<wt:textbox field="Entity.Fee5" />
+<wt:combobox field="Entity.PayMethod5" />
+<wt:textbox field="Entity.WXZZFee" />
+<wt:textbox field="Entity.XjFee" />
+<wt:textbox field="Entity.WxFee" />
+<wt:textbox field="Entity.SkFee" />
+<wt:textbox field="Entity.ZfbFee" />
+<wt:textbox field="Entity.SumFee" />
+</wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>
