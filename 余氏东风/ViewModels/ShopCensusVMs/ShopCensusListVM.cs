@@ -8,11 +8,19 @@ using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using 余氏东风.Models;
 using System.Globalization;
+using System.Data.Common;
+using System.Data;
 
 namespace 余氏东风.ViewModels.ShopCensusVMs
 {
+ 
+
     public partial class ShopCensusListVM : BasePagedListVM<ShopCensus_View, ShopCensusSearcher>
     {
+        public ShopCensusListVM()
+        {
+            DetailGridPrix = "ShopCensuss";
+        }
         protected override List<GridAction> InitGridAction()
         {
             return new List<GridAction>
@@ -42,9 +50,13 @@ namespace 余氏东风.ViewModels.ShopCensusVMs
                 this.MakeGridHeaderAction(width: 200)
             };
         }
-
+        public override DbCommand GetSearchCommand()
+        {
+            return base.GetSearchCommand();
+        }
         public override IOrderedQueryable<ShopCensus_View> GetSearchQuery()
         {
+
             var query1 = DC.RunSQL(@"select cast(year(CreateTime) as varchar)+'-'+cast(month(CreateTime) as varchar)+'-'+cast(day(CreateTime) as varchar) time,
             cast(sum(WXZZFee) as decimal(18, 2)) WXZZFee, sum(XjFee) XjFee, sum(WxFee) WxFee, sum(SkFee) SkFee, sum(ZfbFee) ZfbFee, cast(sum(SumFee) as decimal(18, 2)) SumFee
             from Shops group by year(CreateTime), month(CreateTime), day(CreateTime)");
@@ -66,7 +78,9 @@ namespace 余氏东风.ViewModels.ShopCensusVMs
                 sv.Type = CensusTypeEnum.QB;
                 list.Add(sv);
             }
-            return list.AsQueryable().OrderBy(m => m.Riqi);
+            var query = list.AsQueryable()
+          .OrderBy(x => x.ExcelIndex);
+            return query;
         }
 
     }

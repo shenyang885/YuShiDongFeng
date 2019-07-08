@@ -6,6 +6,7 @@ using System.Globalization;
 using WalkingTec.Mvvm.Core;
 using WalkingTec.Mvvm.Mvc;
 using 余氏东风.Models;
+using 余氏东风.ViewModels;
 using 余氏东风.ViewModels.ShopCensusVMs;
 
 namespace 余氏东风.Controllers
@@ -19,6 +20,7 @@ namespace 余氏东风.Controllers
         public ActionResult Index()
         {
             var vm = CreateVM<ShopCensusListVM>();
+
             return PartialView(vm);
         }
         #endregion
